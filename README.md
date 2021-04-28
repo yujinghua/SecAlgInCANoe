@@ -13,6 +13,8 @@ Option 1: Use the [Installation Package](http://slproweb.com/products/Win32OpenS
 Option 2: Follow the guideline from the [OpenSSL website](https://www.openssl.org/source/)
 
 #### S2: Add the path of the library file to the project configuration
+![](https://github.com/yujinghua/SecAlgInCANoe/blob/main/image/Setup_1.png)
+
 
 ### Create a CAPL DLL
 

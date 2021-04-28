@@ -13,11 +13,11 @@ Option 1: Use the [Installation Package](http://slproweb.com/products/Win32OpenS
 Option 2: Follow the guideline from the [OpenSSL website](https://www.openssl.org/source/)
 
 #### S2: Add the path of the library files to the project Property
-![](https://github.com/yujinghua/SecAlgInCANoe/blob/main/image/Setup_1.png)
+![](https://github.com/yujinghua/SecAlgInCANoe/blob/main/image/Setup_1.png) <br>
 Fig.1
 
 #### S3: Add library names to the project Property
-![](https://github.com/yujinghua/SecAlgInCANoe/blob/main/image/Setup_2.png)
+![](https://github.com/yujinghua/SecAlgInCANoe/blob/main/image/Setup_2.png) <br>
 Fig. 2
 
 #### S4: Include corresponding .h files in your .cpp
@@ -33,8 +33,23 @@ The template path could be C:\Users\Public\Documents\Vector\CANoe\Sample Configu
 #### S3: Add the path of the library files and the library names to the project Property 
 See Fig.1 and Fig.2
 
+#### S4: Program in capldll.cpp file (Don't foget to include the corresponding head files)
+
+#### S5: Build the project and get the .dll file i the target folder
 
 ### Config CANoe environment
+
+#### Option 1: Add .dll files in .can 
+
+```
+includes{
+    #pragma library("C:\Program Files (x86)\OpenSSL-Win32\libcrypto-1_1.dll")
+    #pragma library("C:\Program Files (x86)\OpenSSL-Win32\libssl-1_1.dll")
+    #pragma library("C:\your\dll\path\OpenSSL_CAPL.dll")
+}
+```
+#### Option 2: Add .dll files in CANoe Configuration
+![](https://github.com/yujinghua/SecAlgInCANoe/blob/main/image/Setup_4.png)
 
 ## Create the first interface
 

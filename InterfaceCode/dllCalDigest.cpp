@@ -1,5 +1,5 @@
 /********** Included files ************/
-#include <openssl/evp.h>
+#include "openssl/evp.h"
 
 /********** The function realizes the algorithm ************/
 int EVPDigest(char* digestname, unsigned char* in, unsigned char* out, long* poutlen)

@@ -1,5 +1,5 @@
 /********** Included files ************/
-#include <openssl/evp.h>
+#include "openssl/evp.h"
 
 /********** The function realizes the algorithm ************/
 int EVPSymmetryDecrypt(const char* ciphername,

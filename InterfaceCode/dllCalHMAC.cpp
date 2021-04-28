@@ -1,5 +1,5 @@
 /********** Included files ************/
-#include <openssl/evp.h>
+#include "openssl/evp.h"
 
 /********** The function realizes the algorithm ************/
 int EVPHmac(char* hashAlgName, const unsigned char* msg, long mlen, unsigned char* val, long* vlen, unsigned char* aKey, long keyLen) {

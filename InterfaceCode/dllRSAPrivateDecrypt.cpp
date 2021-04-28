@@ -5,8 +5,6 @@
 /********** The function realizes the algorithm ************/
 int RSAPriDec(const unsigned char* ciphertext, long cipherLen, const char* priKeyFile, const char* priKeyFilePW, unsigned char* decryptedtext, long* dectextLen) {
 
-	char tmp[256];
-
 	RSA* rsa = NULL;
 	BIO* bp = NULL;
 	bp = BIO_new_file(priKeyFile, "rb");

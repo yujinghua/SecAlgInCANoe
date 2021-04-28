@@ -6,7 +6,6 @@ int EVPHmac(char* hashAlgName, const unsigned char* msg, long mlen, unsigned cha
 	EVP_MD_CTX* mdctx = NULL;
 	const EVP_MD* md = NULL;
 	EVP_PKEY* pkey = NULL;
-	unsigned char md_value[EVP_MAX_MD_SIZE];
 	size_t md_len = 0;
 
 	OpenSSL_add_all_digests();

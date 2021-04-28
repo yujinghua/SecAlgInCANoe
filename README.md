@@ -27,8 +27,9 @@ Fig. 2
 #### S1: Use the CAPL DLL project templates provided by CANoe to start
 The template path could be C:\Users\Public\Documents\Vector\CANoe\Sample Configurations 13.0.118\Programming\CAPLdll\，which can be checked in CANoe -> File -> Sample Configuration -> programming -> CAPL DLL.
 
-#### S2: Config the name and path of the exported .dll file
-![](https://github.com/yujinghua/SecAlgInCANoe/blob/main/image/Setup_3.png)
+#### S2: Configure the name and path of the exported .dll file
+![](https://github.com/yujinghua/SecAlgInCANoe/blob/main/image/Setup_3.png) <br>
+Fig.3
 
 #### S3: Add the path of the library files and the library names to the project Property 
 See Fig.1 and Fig.2
@@ -37,7 +38,7 @@ See Fig.1 and Fig.2
 
 #### S5: Build the project and get the .dll file i the target folder
 
-### Config CANoe environment
+### Configure CANoe environment
 
 #### Option 1: Add .dll files in .can 
 
@@ -49,9 +50,23 @@ includes{
 }
 ```
 #### Option 2: Add .dll files in CANoe Configuration
-![](https://github.com/yujinghua/SecAlgInCANoe/blob/main/image/Setup_4.png)
+![](https://github.com/yujinghua/SecAlgInCANoe/blob/main/image/Setup_4.png) <br>
+Fig.4
 
-## Create the first interface
+### Create the first interface
+An interface for "Add" function is presented as example to show how to create a new interface
 
-
+#### S1: Define and realize the "Add" function
+```
+int32_t CAPLEXPORT CAPLPASCAL appAdd(int32_t x, int32_t y)
+{
+  int32_t z = x + y;
+  return z;
+}
+```
+#### S2: Configure the CAPL export table "CAPL_DLL_INFO4_table[]" in capldll.cpp
+```
+{"dllAdd", (CAPL_FARCALL)appAdd, "CAPL_DLL", "This function will add two values. The return value is the result",'L', 2, "LL", "", {"x","y"}},
+```
+Rules for configuring th CAPL export table are defined in CANoe help file called "Description of the CAPL Export Table". (Path: CAPL » CAPL DLL » Export Table)
 

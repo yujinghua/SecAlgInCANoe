@@ -12,11 +12,27 @@ Create an individual VS consloe app can help you to debug the new algorithms wit
 Option 1: Use the [Installation Package](http://slproweb.com/products/Win32OpenSSL.html)
 Option 2: Follow the guideline from the [OpenSSL website](https://www.openssl.org/source/)
 
-#### S2: Add the path of the library file to the project configuration
+#### S2: Add the path of the library files to the project Property
 ![](https://github.com/yujinghua/SecAlgInCANoe/blob/main/image/Setup_1.png)
+Fig.1
 
+#### S3: Add library names to the project Property
+![](https://github.com/yujinghua/SecAlgInCANoe/blob/main/image/Setup_2.png)
+Fig. 2
+
+#### S4: Include corresponding .h files in your .cpp
 
 ### Create a CAPL DLL
+
+#### S1: Use the CAPL DLL project templates provided by CANoe to start
+The template path could be C:\Users\Public\Documents\Vector\CANoe\Sample Configurations 13.0.118\Programming\CAPLdll\，which can be checked in CANoe -> File -> Sample Configuration -> programming -> CAPL DLL.
+
+#### S2: Config the name and path of the exported .dll file
+![](https://github.com/yujinghua/SecAlgInCANoe/blob/main/image/Setup_3.png)
+
+#### S3: Add the path of the library files and the library names to the project Property 
+See Fig.1 and Fig.2
+
 
 ### Config CANoe environment
 
